@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Grid, Typography, Paper, Box } from "@mui/material";
 import { makeStyles, withStyles } from "@mui/styles";
 import Hero from "../components/Home/Hero"; // Import the Hero component
+import InfoSection from '../components/InfoSection'; 
 
 // Define custom styles
 const useStyles = makeStyles((theme) => ({
@@ -86,6 +87,8 @@ const Home = () => {
           </Grid>
         </Grid>
       </Container>
+
+      <InfoSection/>
     </>
   );
 };
