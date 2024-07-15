@@ -52,7 +52,7 @@ const Hero = () => {
     <Box className={classes.heroSection}>
       <Box className={classes.heroText}>
         <Typography variant="h2" className={classes.heroTitle}>
-          Welcome to Our Website
+          Welcome to Our Website Come
         </Typography>
         <Typography variant="h6" className={classes.heroSubtitle}>
           Discover our services and offerings
