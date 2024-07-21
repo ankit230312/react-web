@@ -4,6 +4,7 @@ import { Container, Typography, Paper } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import './CounterSection.css';
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -14,24 +15,24 @@ const useStyles = makeStyles((theme) => ({
   paper: {
     padding: theme.spacing(2),
     borderRadius: theme.spacing(1),
-    color: '#fff', // White text
+    color: '#fff', 
     boxShadow: theme.shadows[3],
-    background:"black",
-    marginLeft:"4px",transition: 'background-color 0.3s ease',
-    // '&:hover': {
-    //   backgroundColor: 'red',
-    // },
+    backgroundColor: 'black', 
+    marginLeft: '4px',
+    transition: 'background-color 0.3s ease',
+    '&:hover': {
+      backgroundColor: 'red', 
+    },
   },
   statisticValue: {
     fontSize: '1.5rem',
     fontWeight: 'bold',
-    color: 'black',
+    color: 'white',
   },
   statisticLabel: {
     fontSize: '1rem',
-    color: 'black',
+    color: 'white',
   },
- 
 }));
 
 const counterSection = [
@@ -51,10 +52,10 @@ const CounterSection = () => {
     infinite: true,
     speed: 500,
     slidesToShow: 4,
-    slidesToScroll: 1,
-    autoplay: true,  
-    autoplaySpeed: 2000, 
-    rtl: true, 
+    slidesToScroll: 3,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    rtl: true,
     responsive: [
       {
         breakpoint: 1024,
@@ -86,7 +87,7 @@ const CounterSection = () => {
         <Slider {...settings}>
           {counterSection.map((stat, index) => (
             <div key={index}>
-              <Paper className={classes.paper }>
+              <Paper className={classes.paper}>
                 <Typography className={classes.statisticValue}>
                   {stat.value}
                 </Typography>
